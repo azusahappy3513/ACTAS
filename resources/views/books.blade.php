@@ -38,7 +38,7 @@
             </div>
 
             <!-- 本のタイトル -->
-            <form action="{{ url('bookdata/dashboard/books') }}" method="POST" class="w-full max-w-lg">
+            <form action="{{ url('/bookdata/bookboard/books') }}" method="POST" class="w-full max-w-lg">
                 @csrf
                   <div class="flex flex-col px-2 py-2">
                    <!-- カラム１ -->

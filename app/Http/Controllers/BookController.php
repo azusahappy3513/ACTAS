@@ -63,7 +63,7 @@ class BookController extends Controller
      $books->item_amount = $request->item_amount;
      $books->published   = $request->published;
      $books->save(); 
-     return redirect('/booksdata');
+     return redirect('/bookdata');
     }
 
     /**
@@ -108,7 +108,7 @@ class BookController extends Controller
        ]);
        //バリデーション:エラー
         if ($validator->fails()) {
-            return redirect('/booksedit/'.$request->books_id)
+            return redirect('/booksdata/'.$request->books_id)
                 ->withInput()
                 ->withErrors($validator);
        }

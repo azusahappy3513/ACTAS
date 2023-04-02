@@ -14,10 +14,10 @@
                 <div class="p-6 text-gray-900">
                     <h1>{{auth()->user()->name}}さんが選択している課題本</h1>
  
-                    @foreach(auth()->user()->books as $book)
+                    {{-- @foreach(auth()->user()->books as $book)　：エラーの為、一旦コメントアウト
                     <div class="mb-4">
                         <p>本の題名：{{$books->item_name}}</p>
-                    @endforeach
+                    @endforeach --}}
                 </div>
                 <div class="p-6 text-gray-900">
                     <h1>{{auth()->user()->name}}さんが所属しているチーム</h1>

@@ -63,17 +63,17 @@ Route::get('/userprofile', [userprofileController::class, 'index'])->middleware(
 
 Route::get('/user', [ProfileController::class,'index'])->middleware(['auth'])->name('index');
 //本：追加 
-Route::post('bookdata/bookboard/books',[BookController::class,"store"])->name('book_store');
+Route::post('/bookdata/bookboard/books',[BookController::class,"store"])->name('book_store');
 
 //本：削除 
-Route::delete('bookdata/bookboard/book/{book}', [BookController::class,"destroy"])->name('book_destroy');
+Route::delete('/bookdata/bookboard/book/{book}', [BookController::class,"destroy"])->name('book_destroy');
 
 //本：更新画面
-Route::post('bookdata/bookboard/booksedit/{book}',[BookController::class,"edit"])->name('book_edit'); //通常
-Route::get('bookdata/bookboard/booksedit/{book}', [BookController::class,"edit"])->name('edit');      //Validationエラーありの場合
+Route::post('/bookdata/bookboard/booksedit/{book}',[BookController::class,"edit"])->name('book_edit'); //通常
+Route::get('/bookdata/bookboard/booksedit/{book}', [BookController::class,"edit"])->name('edit');      //Validationエラーありの場合
 
 //本：更新画面
-Route::post('bookdata/bookboard/books/update',[BookController::class,"update"])->name('book_update');
+Route::post('/bookdata/bookboard/books/update',[BookController::class,"update"])->name('book_update');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

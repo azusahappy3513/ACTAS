@@ -6,19 +6,19 @@
 <body>
 <div id="app" class="p-4">
     <h5>{{ auth()->user()->name}} さん</h5>
-    <div>
+    {{-- <div> エラーの為、一旦コメントアウト
         <span class="badge bg-primary">課題本</span> {{ $user->books->pluck('name')->join('、') }}
-    </div>
+    </div> --}}
     <hr>
     <h6 class="mb-3">同じ課題本のユーザー</h6>
     <ul>
-    @foreach($matched_users as $matched_user)
+    {{-- @foreach($matched_users as $matched_user)　エラーの為、一旦コメントアウト
         <li class="mb-3">
             {{ $matched_user->name }} さん<br>
             <span class="badge bg-success">マッチした課題本</span>（{{ $matched_user->books->count() }}件）
              {{ $matched_user->books->pluck('name')->join('、') }}
         </li>
-    @endforeach
+    @endforeach --}}
     </ul>
 </div>
 </body>

@@ -10,11 +10,11 @@
 <body>
      <div class="container mt-3">
         <div class="container mt-3">
-            <div class="container mb-4">
+            {{-- <div class="container mb-4">  エラーの為、一旦コメントアウト　Userの課題本表示
             @foreach(auth()->user()->books as $book)
             <p>本の題名：{{$books->item_name}}</p>
             @endforeach
-            </div>
+            </div> --}}
 
             <div class="container mb-4">
                 {!! Form::open(['route' => 'todos.store', 'method' => 'POST']) !!}
