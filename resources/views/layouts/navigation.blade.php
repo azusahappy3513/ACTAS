@@ -5,7 +5,7 @@
             <div class="flex">
                 <div class="hidden space-x-3 sm:-my-px sm:ml-83 sm:flex">
                 <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                    <img src="{{asset('storage/actas.png')}}" >
+                    <img src="{{url('/storage/actas.png')}}" >
                 </x-nav-link>
                 {{-- <a href="{{ route('dashboard') }}">
                     <img src="{{asset('storage/actas.png')}}" style="max-height:80px;">
